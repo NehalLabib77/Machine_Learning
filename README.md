@@ -1,129 +1,108 @@
-# Python Basics Jupyter Notebook
 
-This project is a comprehensive Jupyter Notebook designed to introduce and demonstrate fundamental Python programming concepts. It is ideal for beginners who want to learn Python through practical examples and explanations.
+# Machine Learning — Learning Playlist (notebooks + datasets)
 
-## Contents
+This repository is organised as a hands-on, sequential learning playlist for someone who wants to learn machine learning from first principles through short notebooks and small projects. It groups small notebooks, datasets, and example scripts into a path you can follow step-by-step.
 
-The notebook covers the following topics:
+## Quick start (recommended order)
 
-- **Variables and Data Types**: Introduction to variables, strings, integers, floats, and booleans.
-- **Basic Arithmetic**: Performing arithmetic operations such as addition, subtraction, multiplication, division, and more.
-- **Simple Functions**: Defining and using functions in Python.
-- **Conditionals**: Using `if`, `elif`, and `else` statements for decision making.
-- **String Operations**: Manipulating and formatting strings.
-- **Collections**:
-  - **Lists**: Creating, modifying, and accessing list elements.
-  - **Sets**: Working with unordered collections of unique elements.
-  - **Tuples**: Using immutable ordered collections.
-- **Loops**: Iterating over sequences with `for` loops.
-- **Built-in Functions**: Utilizing Python's built-in functions like `max()`, `min()`, `sum()`, `len()`, and `sorted()`.
-- **String Formatting**: Using f-strings for readable and efficient string formatting.
-- **Simple Calculator**: Implementing a basic calculator function.
-- **Practice Examples**: Additional code snippets for practice and demonstration.
+Follow this order if you're learning ML from scratch. Each step lists the folders/notebooks to open and short goals.
 
-## How to Use
+1. Python fundamentals (`Python/`, root notebooks)
+  - Goal: get comfortable with variables, control flow, functions and basic data structures.
+  - Key files: `Python/` notebooks and the root `pandas-numpy-python-cheatsheet.ipynb` for refresher snippets.
 
-1. **Clone or Download** this repository to your local machine.
-2. **Open the Notebook** (`.ipynb` file) using [Jupyter Notebook](https://jupyter.org/) or [VS Code](https://code.visualstudio.com/) with the Python extension.
-3. **Run the Cells** sequentially to see the output and understand each concept.
-4. **Modify and Experiment** with the code to deepen your understanding.
+2. Data loading and cleaning (`Data_Gathering/`, `CSV_File/`)
+  - Goal: learn how to read CSV/JSON/Excel files, handle encodings, chunked reads, and basic cleaning.
+  - Key files: `Data_Gathering/CSV/Working_With_CSV.ipynb`, files inside `CSV_File/` used as practice datasets.
 
-## Requirements
+3. Pandas & NumPy (`Pandas/`, `Numpy/`)
+  - Goal: master DataFrame manipulation, groupby, reshape, missing data handling, and vectorized ops with NumPy.
+  - Key files: `pandas-numpy-python-cheatsheet.ipynb`, `Pandas.ipynb`, and notebooks in `Numpy/`.
 
-- Python 3.x
-- Jupyter Notebook or compatible IDE (e.g., VS Code with Jupyter support)
+4. Exploratory Data Analysis (EDA) (`EDA/`)
+  - Goal: perform EDA on real datasets (cleaning, visualization, feature exploration) and produce a simple report.
+  - Key files: `EDA/Practice.ipynb`, `EDA/titanic-dataset-prediction.ipynb`.
 
-## Getting Started
+5. Visualization (`Matplotlib/`)
+  - Goal: learn plotting essentials to communicate results—line, bar, scatter, histograms, and basic styling.
+  - Key files: notebooks and images under `Matplotlib/`.
 
-To launch the notebook, run:
-```bash
+6. Machine learning basics with scikit-learn (`Scikit_Learn/`)
+  - Goal: learn supervised learning workflow (train/test split, metrics, model fitting) using small datasets.
+  - Key files: `Scikit_Learn.ipynb`, use `Books_small.json` and smaller CSVs for examples.
+
+7. Regression projects (`Linear_Regression/`)
+  - Goal: implement linear and logistic regression examples and small projects end-to-end (preprocess → train → evaluate → visualize).
+  - Key files: notebooks inside `Linear_Regression/`.
+
+8. Toy projects and utilities (`Python_Library/`)
+  - Goal: explore small projects and utility code (model save/load, helper functions). Useful for seeing how pieces fit together.
+  - Key files: `Python_Library/Toy_Project.ipynb`.
+
+9. Put it together: small end-to-end demos
+  - Work through an EDA notebook, then train a model in `Scikit_Learn`, and finally validate it using techniques from `Linear_Regression`.
+
+## How this playlist helps you learn faster
+
+- Bite-sized notebooks: each notebook focuses on one concept (I/O, pandas, plotting, a single model). Work one notebook per session.
+- Reuse real files: `CSV_File/` and `Books_small.json` are small datasets for quick iteration without heavy compute.
+- Practice loop: read → clean → EDA → feature prep → train → evaluate → iterate.
+
+## Per-folder guide (what to open and why)
+
+- `Python/` — exercises on Python basics. If you are new, start here.
+- `Data_Gathering/` — shows practical CSV/JSON loading patterns and encoding/reading tips.
+- `CSV_File/` — sample datasets to practice read/clean/merge operations.
+- `Pandas/` & `pandas-numpy-python-cheatsheet.ipynb` — core reference for common pandas idioms.
+- `EDA/` — step-by-step exploratory workflows and a Titanic example.
+- `Matplotlib/` — plotting examples and image outputs used across EDA notebooks.
+- `Numpy/` — quick numeric examples and array operations.
+- `Scikit_Learn/` — supervised learning examples and minimal model training recipes.
+- `Linear_Regression/` — focused projects for regression and simple modeling.
+- `Python_Library/` — utilities, toy projects, and demonstration scripts.
+
+## Run instructions
+
+1. Create and activate a virtual environment (recommended).
+
+Windows (PowerShell):
+```powershell
+python -m venv .venv; .\.venv\Scripts\Activate.ps1
+```
+
+2. Install dependencies:
+```powershell
+pip install -r requirements.txt
+```
+
+3. Start Jupyter (or open notebooks in VS Code):
+```powershell
 jupyter notebook
-````
+```
 
-## Workspace guide (sectioned)
+4. Work sequentially using the playlist above. Start with `Python/` notebooks then progress to data loading, pandas, EDA, visualization, and finally modeling.
 
-Below are short, focused README sections for each folder / major file in this workspace, in the order you requested (Python, Matplotlib, Numpy, ...). Each section lists the purpose and direct links so you can open files quickly.
+## Exercises and checkpoints (suggested)
 
-1) Python
-- Purpose: beginner Python examples and small exercises (variables, strings, lists, functions, conditionals).
-- Key file: [Python/.ipynb](Python/.ipynb)
-- Notes: contains the example cells shown in the notebook (variables, collections, simple functions, calculator).
+- After `Python/`: implement a small function to calculate accuracy and write unit tests.
+- After `Data_Gathering/`: load `aug_train.csv` and produce a cleaned sample of 100 rows.
+- After `Pandas/`: group a dataset by a categorical column and plot group sizes.
+- After `EDA/`: write a short report (markdown cell) listing 3 features to use for a model and why.
+- After `Scikit_Learn/`: train a simple classifier and produce a confusion matrix.
 
-2) Matplotlib
-- Purpose: plotting examples and Matplotlib usage.
-- Key file: [Matplotlib/.ipynb](Matplotlib/.ipynb)
-- Notes: import patterns and basic plotting snippets.
+## Notes and tips
 
-3) Numpy
-- Purpose: NumPy basics, array operations, and numeric examples.
-- Key files: [Numpy/](Numpy/) (open the notebook files in that folder)
-- Notes: refer to the NumPy sections inside the cheatsheet notebook as well.
+- Keep `myenv/` out of version control; create your own venv using `requirements.txt`.
+- Some CSV files may require `encoding='latin-1'` or `on_bad_lines='skip'` when loading — examples live in `Data_Gathering/CSV/Working_With_CSV.ipynb`.
 
-4) Python_Library
-- Purpose: small toy projects demonstrating DataFrame operations and model outputs.
-- Key file: [Python_Library/Toy_Project.ipynb](Python_Library/Toy_Project.ipynb)
-- Notes: includes pandas DataFrame inspection examples and a LogisticRegression HTML repr.
+## Next steps I can take
 
-5) Linear_Regression
-- Purpose: linear- and logistic-regression examples and small projects.
-- Key files:
-  - [Linear_Regression/Toy_Project.ipynb](Linear_Regression/Toy_Project.ipynb)
-  - [Linear_Regression/Diabetes_Prediction.ipynb](Linear_Regression/Diabetes_Prediction.ipynb)
-  - [Linear_Regression/the pumpkin market.ipynb](Linear_Regression/the pumpkin market.ipynb)
-- Notes: training, plotting regression lines, and using sklearn estimators.
+1. Create focused `README.md` files inside each major folder with quick-start steps and exact notebook links.
+2. Generate short `try-it` commands and small unit tests for a few notebooks.
 
-6) Data_Gathering
-- Purpose: examples for loading CSV/JSON/SQL data and chunked reading.
-- Key files:
-  - [Data_Gathering/CSV/Working_With_CSV.ipynb](Data_Gathering/CSV/Working_With_CSV.ipynb)
-  - [Data_Gathering/JASON_SQL/Working_With_JASON_SQL.ipynb](Data_Gathering/JASON_SQL/Working_With_JASON_SQL.ipynb)
-- Notes: demonstrates encoding, on_bad_lines, chunksize, dtype hints, and JSON loading.
+If you want me to continue, I'll scan each folder and create per-folder README files (one-by-one). Reply: `yes` to proceed or `no` to stop here.
 
-7) CSV_File
-- Purpose: collected CSV/TSV datasets used across notebooks and demos.
-- Key files:
-  - [CSV_File/aug_train.csv](CSV_File/aug_train.csv)
-  - [CSV_File/BX-Books.csv](CSV_File/BX-Books.csv)
-  - [CSV_File/movie_titles_metadata.tsv](CSV_File/movie_titles_metadata.tsv)
-  - [CSV_File/model.pkl](CSV_File/model.pkl)
-  - [CSV_File/zomato.csv](CSV_File/zomato.csv)
-- Notes: some CSVs need encoding='latin-1' or on_bad_lines='skip' as shown in the CSV working notebook.
+---
 
-8) EDA
-- Purpose: exploratory data analysis examples (Titanic, practice EDA).
-- Key files:
-  - [EDA/Practice.ipynb](EDA/Practice.ipynb)
-  - [EDA/titanic-dataset-prediction.ipynb](EDA/titanic-dataset-prediction.ipynb)
-- Notes: step-by-step EDA, visualization tips, submission CSV creation.
+Last updated: 2025-09-16
 
-9) Scikit_Learn
-- Purpose: quick sklearn examples and reading JSON/Books_small reviews for ML demos.
-- Key file: [Scikit_Learn.ipynb](Scikit_Learn.ipynb)
-- Notes: shows reading [Books_small.json](Books_small.json) and extracting (reviewText, overall).
-
-10) Pandas & Cheatsheet
-- Purpose: extensive pandas + numpy cheat sheet and examples.
-- Key files:
-  - [pandas-numpy-python-cheatsheet.ipynb](pandas-numpy-python-cheatsheet.ipynb)
-  - [Pandas.ipynb](Pandas.ipynb)
-- Notes: covers read_csv options, NaN handling, groupby, reshape, and common gotchas (smart quotes in examples).
-
-11) Books_small.json
-- Purpose: JSON lines dataset of book reviews used in examples.
-- Key file: [Books_small.json](Books_small.json)
-- Notes: used by [Scikit_Learn.ipynb](Scikit_Learn.ipynb) to demonstrate json.loads per-line reading.
-
-12) requirements.txt
-- Purpose: package list for reproducing the environment.
-- Key file: [requirements.txt](requirements.txt)
-- Notes: use a virtual environment and pip install -r requirements.txt.
-
-13) myenv
-- Purpose: developer-local virtual environment folder (do not commit).
-- Key folder: [myenv/](myenv/)
-- Notes: ignore in VCS; recreate via requirements.txt.
-
-How to use this sectioned README
-- Open the relevant notebook by clicking the links above.
-- Follow each notebook cell top-to-bottom.
-- For large CSVs, prefer using the examples in [Data_Gathering/CSV/Working_With_CSV.ipynb](Data_Gathering/CSV/Working_With_CSV.ipynb) (encoding, dtype, chunksize).

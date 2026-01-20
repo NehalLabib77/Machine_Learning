@@ -79,8 +79,7 @@ Where:
 ┌─────────────────┐
 │  7. Predict &   │
 │     Evaluate    │
-└─────────────────┘
-```
+└─────────────────┘```
 
 ---
 
@@ -418,5 +417,3 @@ plt.show()
 - **Outlier Detection** - Handling anomalies
 
 ---
-
-*Happy Learning! 🚀*

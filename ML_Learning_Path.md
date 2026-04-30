@@ -1373,3 +1373,6 @@ You've got this! 🚀
 ---
 
 **Happy learning!** 📘✨
+
+Summary of all model 
+![alt text](image.png)
